@@ -1,0 +1,9 @@
+{{ if ne .chezmoi.os "linux" }}
+.config/nvim/lua/user/init.lua
+.config/alacritty/alacritty.yml
+{{ end }}
+{{ if ne .chezmoi.os "windows" }}
+AppData/Local/nvim/lua/user/init.lua
+AppData/Roaming/alacritty/alacritty.yml
+{{ end }}
+
