@@ -1,0 +1,70 @@
+{
+    "files.exclude": {
+        "**/.git": false
+    },
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false
+    },
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["leader", "w"],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": ["leader", "q"],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": ["leader", "t"],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
+            ]
+        },
+        {
+            "before": ["leader", "f", "f"],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": ["leader", "f", "w"],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },
+        {
+            "before": ["H"],
+            "commands": [
+                    "workbench.action.previousEditorInGroup"
+            ]
+        },
+        {
+            "before": ["L"],
+            "commands": [
+                    "workbench.action.nextEditorInGroup"
+            ]
+        },
+        {
+            "before": ["|"],
+            "commands": [
+                    "workbench.action.splitEditor"
+            ]
+        },
+        {
+            "before": ["\\"],
+            "commands": [
+                    "workbench.action.splitEditorOrthogonal"
+            ]
+        }
+    ],
+    "editor.fontFamily": "JetbrainsMono Nerd Font Mono, 'Courier New', monospace",
+    "workbench.colorTheme": "Tokyo Night Storm",
+    "editor.fontSize": 15
+}
