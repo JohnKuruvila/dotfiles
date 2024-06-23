@@ -242,17 +242,17 @@ tmux_conf_theme_right_separator_sub="|"
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=" ❐ #S | #{pomodoro_status}"
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized} | PRs: #{open_prs} | #{latest_jenkins_result} | %R , %d %b | #{hostname} "
+tmux_conf_theme_status_left=" ❐ #S "
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized} | %R , %d %b | #{hostname} "
 
 # status left style
-tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7"
+tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6"
 tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
-tmux_conf_theme_status_left_attr="bold,none,none"
+tmux_conf_theme_status_left_attr="bold,none"
 
 # status right style
-tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_6"
-tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_14,$tmux_conf_theme_colour_14,$tmux_conf_theme_colour_14,$tmux_conf_theme_colour_14,$tmux_conf_theme_colour_5"
+tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_6"
+tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_14,$tmux_conf_theme_colour_14,$tmux_conf_theme_colour_5"
 tmux_conf_theme_status_right_attr="none,none,none,none,none,bold"
 
 # pairing indicator
@@ -409,13 +409,6 @@ tmux_conf_uninstall_plugins_on_reload=true
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
 
-# Pomodoro Timer
-set -g @plugin 'olimorris/tmux-pomodoro-plus'
-set -g @pomodoro_mins 40
-set -g @pomodoro_break_mins 5
-set -g @pomodoro_on "#[fg=$text_red]🍅 "
-set -g @pomodoro_complete "#[fg=$text_green]🍅 "
-
 # -- custom variables ----------------------------------------------------------
 
 # to define a custom #{foo} variable, define a POSIX shell function between the
@@ -438,17 +431,6 @@ set -g @pomodoro_complete "#[fg=$text_green]🍅 "
 #
 # online() {
 #   ping -c 1 1.1.1.1 >/dev/null 2>&1 && printf '✔' || printf '✘'
-# }
-
-# open_prs() {
-#     cd /home/john/MapGen/ &&  gh pr list --search "is:open is:pr review:none" | wc -l
-#     sleep 600
-# }
-#
-# latest_jenkins_result() {
-#     python3 /home/john/Scripts/get-latest-jenkins-result.py
-#     $tmux_conf_theme_colour_14="#FFFFFF"
-#     sleep 600
 # }
 
 # "$@"
